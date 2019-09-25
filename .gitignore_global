@@ -1,0 +1,15 @@
+# NPM
+node_modules
+
+# OSX
+.DS_Store
+__MACOSX
+
+# TODO files
+TODO.md
+todo.md
+
+# vim
+*.swp
+*.swo
+*.so
