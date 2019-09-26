@@ -1,0 +1,139 @@
+{
+  // Editor UI
+  "editor.tabSize": 2,
+  "editor.fontSize": 16,
+  "editor.wordWrapColumn": 100,
+  "editor.wordWrap": "wordWrapColumn",
+  "editor.tabCompletion": "onlySnippets",
+  "editor.snippetSuggestions": "top",
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {},
+  // "editor.selectionHighlight": false,
+  "editor.occurrencesHighlight": false,
+  "explorer.autoReveal": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "window.zoomLevel": 0,
+  // Workbench
+  "workbench.startupEditor": "none",
+  "workbench.iconTheme": "material-icon-theme",
+  // Files
+  "files.associations": {
+    // "*.css": "scss" // postcss
+    // "*.json": "jsonc",
+    ".babelrc": "jsonc",
+    ".eslintrc": "jsonc",
+    // "*.wxss": "css", // MiniProgram
+    // "*.wsx": "javascript",
+    "settings.json": "jsonc"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    // "**/node_modules": true // Uncomment to hide node_modules
+  },
+  // Language
+  // "javascript.suggest.enabled": false,
+  // "javascript.validate.enable": false,
+  // Disable file is a commonjs module tip
+  "javascript.suggestionActions.enabled": false,
+  "javascript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "javascript.suggest.autoImports": false,
+  "typescript.autoClosingTags": true,
+  // "typescript.suggest.enabled": false,
+  // "typescript.validate.enable": false,
+  "typescript.suggest.autoImports": false,
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "typescript.format.insertSpaceBeforeFunctionParenthesis": true,
+  "typescript.format.insertSpaceBeforeAndAfterBinaryOperators": true,
+  // "dart.flutterSdkPath": "/Users/ntnyq/dev/flutter",
+  // Emmet
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.showExpandedAbbreviation": "always",
+  "emmet.syntaxProfiles": {
+    // "javascript": "jsx, tsx"
+    // "css": "jsx, tsx"
+    "vue-html": "html"
+  },
+  "emmet.includeLanguages": {
+    // "wxml": "html" // MiniProgram
+    "vue-html": "html"
+  },
+  // Eslint
+  "eslint.autoFixOnSave": true,
+  "eslint.packageManager": "yarn",
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    {
+      "language": "javascriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    },
+    {
+      "language": "vue-html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+  // Vetur
+  "vetur.completion.autoImport": true,
+  "vetur.completion.tagCasing": "kebab",
+  "vetur.format.defaultFormatter.html": "js-beautify-html",
+  "vetur.format.defaultFormatter.js": "vscode-typescript",
+  "vetur.format.defaultFormatter.scss": "prettier",
+  "vetur.format.defaultFormatter.stylus": "stylus-supremacy",
+  "vetur.experimental.templateInterpolationService": false,
+  "vetur.format.defaultFormatterOptions": {
+    "js-beautify-html": {
+      "wrap_attributes": "force-expand-multiline"
+    }
+  },
+  // Prettier
+  "prettier.semi": false,
+  "prettier.useTabs": false,
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  // "prettier.printWidth": 100,
+  "prettier.bracketSpacing": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.trailingComma": "es5",
+  "prettier.jsxBracketSameLine": false,
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "lf",
+  "prettier.tslintIntegration": false,
+  "prettier.proseWrap": "preserve",
+  "prettier.quoteProps": "as-needed",
+  "prettier.eslintIntegration": true,
+  // Stylus
+  "stylusSupremacy.insertColons": false,
+  "stylusSupremacy.insertSemicolons": false,
+  "stylusSupremacy.insertBraces": false,
+  "stylusSupremacy.insertNewLineAroundImports": true,
+  "stylusSupremacy.insertNewLineAroundBlocks": true,
+  // SettingSync
+  "sync.gist": "f4a53de5f8816dcd26e9488a81a89709",
+  "extensions.ignoreRecommendations": false,
+  "[handlebars]": {},
+  "terminal.integrated.fontSize": 16,
+  "editor.fontFamily": "Monaco, 'Courier New', monospace",
+  "sync.forceUpload": true
+}
