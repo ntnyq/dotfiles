@@ -1,23 +1,39 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+# If you come from bash you might have to change your $PATH.
+# export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Set name of the theme to load. Optionally, if you set this to "random"
-# it'll load a random theme each time that oh-my-zsh is loaded.
+# Path to your oh-my-zsh installation.
+export ZSH="/Users/Dev/.oh-my-zsh"
+
+# Set name of the theme to load --- if set to "random", it will
+# load a random theme each time oh-my-zsh is loaded, in which case,
+# to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="robbyrussell"
+
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
 
-# Uncomment the following line to use hyphen-insensitive completion. Case
-# sensitive completion must be off. _ and - will be interchangeable.
+# Uncomment the following line to use hyphen-insensitive completion.
+# Case-sensitive completion must be off. _ and - will be interchangeable.
 # HYPHEN_INSENSITIVE="true"
 
 # Uncomment the following line to disable bi-weekly auto-update checks.
 # DISABLE_AUTO_UPDATE="true"
 
+# Uncomment the following line to automatically update without prompting.
+# DISABLE_UPDATE_PROMPT="true"
+
 # Uncomment the following line to change how often to auto-update (in days).
 # export UPDATE_ZSH_DAYS=13
+
+# Uncomment the following line if pasting URLs and other text is messed up. [Performance]
+DISABLE_MAGIC_FUNCTIONS=true
 
 # Uncomment the following line to disable colors in ls.
 # DISABLE_LS_COLORS="true"
@@ -38,17 +54,25 @@ ZSH_THEME="robbyrussell"
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# You can set one of the optional three formats:
+# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
+# or set a custom format using the strftime function format specifications,
+# see 'man strftime' for details.
 # HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Which plugins would you like to load?
+# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-# plugins=( git extract zsh-autosuggestions z)
+# plugins=(
+#  z
+#  git
+#  zsh-autosuggestions
+# )
 
 source $ZSH/oh-my-zsh.sh
 
@@ -57,7 +81,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -69,45 +93,98 @@ export LANG=en_US.UTF-8
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
-# ssh
-# export SSH_KEY_PATH="~/.ssh/rsa_id"
+# Set personal aliases, overriding those provided by oh-my-zsh libs,
+# plugins, and themes. Aliases can be placed here, though oh-my-zsh
+# users are encouraged to define aliases within the ZSH_CUSTOM folder.
+# For a full list of active aliases, run `alias`.
+#
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Install zplug, plugin manager for zsh, https://github.com/zplug/zplug
-# curl -sL --proto-redir -all,https https://raw.githubusercontent.com/zplug/installer/master/installer.zsh | zsh
-# Zplug configruation
-if [[ ! -d "${ZPLUG_HOME}" ]]; then
-  if [[ ! -d ~/.zplug ]]; then
-    git clone https://github.com/zplug/zplug ~/.zplug
-    # If we can't get zplug, it'll be a very sobering shell experience. To at
-    # least complete the sourcing of this file, we'll define an always-false
-    # returning zplug function.
-    if [[ $? != 0 ]]; then
-      function zplug() {
-        return 1
-      }
-    fi
-  fi
-  export ZPLUG_HOME=~/.zplug
+
+# User custom alias
+alias cdw='cd ~/Desktop/work'
+alias ow='open ~/Desktop/work'
+alias cdd='cd ~/Documents/docs'
+alias od='open ~/Documents/docs'
+alias cdm='cd ~/Documents/medias'
+alias om='open ~/Documents/medias'
+
+alias gcz='git-cz'
+alias av='anywhere'
+alias cls='clear'
+alias c='clear'
+alias edc='touch .editorconfig'
+alias trm='touch README.md'
+alias prettier='touch .prettierrc.yml .prettierignore'
+
+alias y='yarn'
+alias yi='yarn init -y'
+alias ya='yarn add'
+alias yad='yarn add --dev'
+alias yap='yarn add --peer'
+alias yrm='yarn remove'
+alias ycc='yarn cache clean'
+alias yls='yarn list'
+alias yu='yarn upgrade-interactive'
+alias yul='yarn upgrade-interactive --latest'
+alias ycls='yarn config list'
+alias ycs='yarn config set'
+alias ycg='yarn config get'
+alias ycd='yarn config delete'
+alias yga='yarn global add'
+alias ygrm='yarn global remove'
+alias ygu='yarn global upgrade'
+alias ygls='yarn global list'
+alias yd='yarn dev'
+alias yb='yarn build'
+alias ys='yarn serve'
+alias yt='yarn test'
+alias ytu='yarn test:unit'
+
+alias t='tmux'
+
+export PATH="$PATH:$HOME/.yarn/bin"
+export PATH="/usr/local/opt/make/libexec/gnubin:$PATH"
+
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+### Added by Zinit's installer
+if [[ ! -f $HOME/.zinit/bin/zinit.zsh ]]; then
+    print -P "%F{33}▓▒░ %F{220}Installing %F{33}DHARMA%F{220} Initiative Plugin Manager (%F{33}zdharma/zinit%F{220})…%f"
+    command mkdir -p "$HOME/.zinit" && command chmod g-rwX "$HOME/.zinit"
+    command git clone https://github.com/zdharma/zinit "$HOME/.zinit/bin" && \
+        print -P "%F{33}▓▒░ %F{34}Installation successful.%f%b" || \
+        print -P "%F{160}▓▒░ The clone has failed.%f%b"
 fi
 
-if [[ -d "${ZPLUG_HOME}" ]]; then
-  source "${ZPLUG_HOME}/init.zsh"
-fi
+source "$HOME/.zinit/bin/zinit.zsh"
+autoload -Uz _zinit
+(( ${+_comps} )) && _comps[zinit]=_zinit
 
-# List of Zplug plugins
-zplug 'plugins/git', from:oh-my-zsh, if:'which git', defer:2
-zplug 'plugins/extract', from:oh-my-zsh, defer:3
-zplug 'plugins/z', from:oh-my-zsh, defer:2
-zplug 'zsh-users/zsh-autosuggestions', defer:3
-zplug 'zsh-users/zsh-completions', defer:3
-zplug 'zsh-users/zsh-syntax-highlighting', defer:1
+# Load a few important annexes, without Turbo
+# (this is currently required for annexes)
+zinit light-mode for \
+    zinit-zsh/z-a-rust \
+    zinit-zsh/z-a-as-monitor \
+    zinit-zsh/z-a-patch-dl \
+    zinit-zsh/z-a-bin-gem-node
 
-# Load Zplug plugins
-if ! zplug check; then
-  zplug install
-fi
+# User Plugins
+zinit snippet OMZP::git
+zinit light agkozak/zsh-z
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-autosuggestions
+zinit light zdharma/fast-syntax-highlighting
 
-zplug load
+# Theme
+zinit ice depth=1;
+zinit light romkatv/powerlevel10k
 
-# Source your own shrc file if exists
-[ -f ~/.env.sh ] && source ~/.env.sh
+### End of Zinit's installer chunk
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
